@@ -1,0 +1,131 @@
+.main {
+	margin-top: 18px;
+	padding-top: 18px; 
+}
+
+.contactTextContainer{
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.contact{
+	background-color: var(--color__medio__negro);
+	margin: 0 36px;
+	padding: 36px;
+	gap: 36px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+}
+
+.contactInput{
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	justify-content: space-between;
+}
+
+.contactInputItem{
+	border: none;
+}
+
+.contactInputItemButton{
+	border: none;
+	padding: 9px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.contactInputItemButton:hover{
+	background: linear-gradient(to bottom, var(--color__claro__blanco), var(--color__claro__rojo));
+}
+
+.contactInputItemButtonSubmit{
+	padding: 9px;
+	width: 100%;
+	color: var(--color__claro__blanco);
+	background-color: var(--color__oscuro__negro);
+	border: none;
+	transition: color, background-color, .3s ease-in-out;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.contactInputItemSubmit{
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+.contactInputItemButtonSubmit:hover{
+	color: var(--color__claro__rojo);
+	background-color: var(--color__claro__negro);
+}
+
+.fulWarn{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .80);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+	z-index: 300;
+	overflow: auto;
+}
+
+.contactWarningBackground{
+	background-color: var(--color__medio__negro);
+	padding: 36px 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 36px;
+}
+
+.contactWarning{
+	user-select: none;
+}
+
+.aceptar{
+	background-color: var(--color__oscuro__negro);
+	font-size: 30px;
+	color: var(--color__claro__blanco);
+	cursor: pointer;
+	transition: transform, color, .3s ease-in-out;
+	display: grid;
+	place-items: center;
+	user-select: none;
+	width: 100%;
+	padding: 9px;
+}
+
+.aceptar:hover{
+	transform: scale(1.2);
+	color: var(--color__claro__rojo);
+	background-color: var(--color__claro__negro);
+}
+
+@media only screen and (max-width: 320px){
+	.contactWarningBackground{
+		background-color: var(--color__medio__negro);
+		padding: 30px 42px;
+		margin: 36px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+	}
+
+	.aceptar{
+		font-size: 24px;
+		padding: 6px;
+	}
+}

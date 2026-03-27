@@ -1,0 +1,71 @@
+@import "normalize.css";
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: var(--font__text__regular);
+	font-size: 15px;
+	user-select: none;
+}
+
+:root {
+	--color__claro__blanco: #FFFFFF;
+	--color__claro__negro: #262626;
+	--color__medio__negro: #1A1A1A;
+	--color__oscuro__negro: #0E0E0E;
+	--color__claro__rojo: #D97373;
+	--color__oscuro__rojo: #D92B4B;
+
+	--font__text__regular: 'Nunito', sans-serif;
+	--font__title__regular: 'Big Shoulders Text', cursive;
+}
+
+body {
+	background-color: var(--color__claro__negro);
+}
+
+h2{
+	font-family: var(--font__title__regular);
+	letter-spacing: .05em;
+	color: var(--color__oscuro__rojo);
+	text-decoration: underline;
+	text-underline-offset: .15em;
+	font-size: 45px;
+	text-decoration-thickness: .05em;
+	line-height: 1.25em;
+}
+
+h4{
+	font-family: var(--font__title__regular);
+	font-size: 24px;
+	letter-spacing: .05em;
+	color: #fff;
+}
+
+p {
+	font-size: 15px;
+	line-height: 1.2em;
+	letter-spacing: .05em;
+	color: var(--color__claro__blanco);
+	font-weight: lighter;
+}
+
+a{
+	text-decoration: none;
+}
+
+.paragraphText{
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	justify-content: space-between;
+}
+
+.link{
+	color: var(--color__claro__blanco);
+	transition: color .3s ease-in-out;
+}
+
+.link:hover{
+	color: var(--color__claro__rojo);
+}

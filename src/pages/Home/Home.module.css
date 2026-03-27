@@ -1,0 +1,177 @@
+.main {
+	margin-top: 18px;
+}
+
+.fulImgBox{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .80);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+	z-index: 300;
+	top: 0;
+	left: 0;
+}
+
+.fulImgBoxZoomed{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .80);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+	z-index: 300;
+	top: 0;
+	left: 0;
+	overflow: auto;
+}
+
+.imgContainer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.imgContainerZoomed{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	left: 0;
+}
+
+.imgOriginal{
+	margin: auto;
+	max-width: 90%;
+	max-height: 90%;
+	user-select: none;
+	cursor: zoom-in;
+}
+
+.imgZoomed{
+	margin: auto;
+	user-select: none;
+	cursor: zoom-out;
+}
+
+.modalButtons{
+	top: 50vh;
+	font-size: 54px;
+	z-index: 10000;
+	user-select: none;
+	transition: background-color, transform, opacity, .3s ease-in-out;
+	position: fixed;
+	cursor: pointer;
+	color: var(--color__claro__blanco);
+	opacity: .05;
+	display: block;
+}
+
+.modalButtons:hover{
+	transform: scale(1.2);
+	color: var(--color__claro__rojo);
+	opacity: 1;
+}
+
+#arrowLeft{
+	left: 36px;
+}
+
+#arrowRight{
+	right: 36px;
+}
+
+#x{
+	display: block;
+	top: 36px;
+	right: 36px;
+	font-size: 54px;
+	z-index: 1000;
+	user-select: none;
+	transition: background-color, transform, opacity, .3s ease-in-out;
+	position: fixed;
+	cursor: pointer;
+	color: var(--color__oscuro__negro);
+	opacity: .25;
+}
+
+#x:hover{
+	transform: scale(1.2);
+	color: var(--color__claro__rojo);
+	opacity: 1;
+}
+
+.masonryWrapper {
+	margin: 0 36px;
+}
+
+.myMasonryGrid {
+	display: flex;
+	margin-left: -18px; /* gutter offset */
+	width: auto;
+}
+
+.myMasonryGridColumn {
+	padding-left: 18px; /* gutter */
+	background-clip: padding-box;
+}
+
+.gridItem{
+	position: relative;
+	width: 100%;
+	margin-bottom: 18px;
+	transition: transform, .3s ease-in-out;
+	cursor: pointer;
+	display: block; 
+}
+
+.gridItem:hover {
+	transform: scale(1.05);
+}
+
+.gridItem:hover > .gridItemMask{
+	opacity: 1;
+}
+
+.gridItemItem {
+	display: block;
+	width: 100%;
+}
+
+.gridItemMask{
+	background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+	backdrop-filter: grayscale(.85);
+	position: absolute;
+	opacity: 0;
+	padding: 8px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	transition: opacity, .3s ease-in-out;
+}
+
+.gridItemTitle{
+	font-weight: 100;
+	padding-bottom: 1.5px;
+	border-bottom: 1.5px solid var(--color__claro__rojo);
+	margin: 0;
+}

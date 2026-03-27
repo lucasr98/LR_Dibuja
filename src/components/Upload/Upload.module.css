@@ -1,0 +1,54 @@
+.main {
+    margin-top: 18px;
+    padding-top: 18px;
+    min-height: calc(100vh - 150px);
+}
+
+.uploadContainer {
+    background-color: var(--color__medio__negro);
+    margin: 0 36px;
+    padding: 36px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inputField, .fileField {
+    padding: 9px;
+    border: none;
+    background-color: var(--color__claro__blanco);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fileField {
+    background-color: var(--color__claro__negro);
+    color: var(--color__claro__blanco);
+}
+
+.uploadButton {
+    padding: 9px;
+    background-color: var(--color__oscuro__negro);
+    color: var(--color__claro__blanco);
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+
+.uploadButton:hover:not(:disabled) {
+    background-color: var(--color__claro__negro);
+    color: var(--color__claro__rojo);
+}
+
+.statusMessage {
+    color: var(--color__claro__rojo);
+    text-align: center;
+    font-weight: bold;
+}

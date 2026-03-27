@@ -1,0 +1,142 @@
+.header{
+	margin-top: -118px;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color__oscuro__negro);
+	align-items: center;
+	padding: 20px 36px;
+	z-index: 200;
+	transition: margin-top, .3s ease-in-out;
+	box-sizing: border-box;
+}
+
+.homeVector{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color__oscuro__rojo);
+	border-radius: 100%;
+	transition: transform .3s ease-in-out;
+}
+
+.homeVector > img{
+	position: absolute;
+	filter: invert(100%);
+	width: 75%;
+	height: 75%;
+}
+
+.homeLogo{
+	transition: transform .3s ease-in-out;
+	display: flex;
+	align-items: center;
+	column-gap: 18px;
+}
+
+.homeLogo:hover{
+	transform: scale(1.05);
+}
+
+.homeLogo:hover > .homeVector {
+	transform: rotate(360deg);
+}
+
+.homeText {
+	font-family: 'Big Shoulders Text', cursive;
+	font-size: 36px;
+	color: var(--color__claro__blanco);
+	letter-spacing: .1em;
+}
+
+.subHeaderPc{
+	display: flex;
+	align-items: center;
+}
+
+.subHeaderPcButton{
+	padding: 18px;
+}
+
+.subHeaderPcButton:hover{
+	background-color: var(--color__medio__negro);
+	transition: background-color .3s ease-in-out;
+}
+
+.subHeaderPcButton:hover > .subHeaderPcButtonLink{
+	color: var(--color__claro__rojo);
+}
+
+.subHeaderPcButtonLink{
+	color: var(--color__claro__blanco);
+	transition: color .3s ease-in-out;
+	letter-spacing: .1em;
+}
+
+.subHeaderSm{
+	display: none;
+}
+
+@media only screen and (max-width: 580px){
+	.subHeaderPc{
+		display: none;
+	}
+	
+	.subHeaderSm{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		justify-items: center;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 18px;
+	}
+	
+	.subHeaderSm i {
+		font-size: 18px;
+		color: var(--color__claro__blanco);
+	}
+	
+	.subHeaderSm i:hover {
+		color: var(--color__claro__rojo);
+	}
+}
+
+@media only screen and (max-width: 540px){
+	.header{
+		height: 50px;
+		margin-top: -68px;
+	}
+
+	.homeText{
+	    font-size: 18px;
+	}
+
+	.homeLogo{
+	    column-gap: 9px;
+	}
+
+	.homeVector{
+	    height: 30px;
+	    width: 30px;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	.homeText{
+		display: none;
+	}
+
+	.subHeaderPc{
+		display: none;
+	}
+
+	.subHeaderSm{
+		display: flex;
+	}
+}

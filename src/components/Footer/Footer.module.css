@@ -1,0 +1,20 @@
+.footer{
+	background-color: var(--color__medio__negro);
+	margin: 18px 36px;
+	padding: 18px;
+}
+
+.copyright{
+	color: var(--color__claro__negro);
+	letter-spacing: .1em;
+	font-weight: bolder;
+	text-align: center;
+	user-select: none;
+}
+
+@media only screen and (max-width: 320px){
+	.copyright{
+		font-size: 9px;
+		letter-spacing: .05em;
+	}
+}
